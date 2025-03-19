@@ -1,4 +1,3 @@
-// src/app/fcm.service.ts
 import { Injectable } from '@angular/core';
 import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 import { initializeApp } from 'firebase/app';
@@ -35,7 +34,7 @@ export class FcmService {
     })
       .then((tokenActual) => {
         if (tokenActual) {
-          console.log('Token FCM:', tokenActual);
+          console.log('Token Firebase:', tokenActual);
           this.token = tokenActual;
           console.log("Copiar:", this.token);
         } else {
@@ -45,7 +44,7 @@ export class FcmService {
         }
       })
       .catch((error) => {
-        console.error('Error al obtener el token FCM:', error);
+        console.error('Error al obtener el token Firebase:', error);
       });
   }
 

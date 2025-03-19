@@ -9,10 +9,10 @@ import { Observable } from 'rxjs';
 export class AlertService {
   constructor(private http: HttpClient) {}
 
-  serverUrl = 'http://localhost:8080/webHook';
+  serverUrl = 'http://localhost:8081/webHook';
 
-  Alerta(token: string, cuerpo: string): Observable<any> {
-    const payload = {
+  enviarInformacionNotification(token: string, cuerpo: string): Observable<any> {
+    const informacion = {
       to: token,
       notification: {
         title: "Alerta",
@@ -20,8 +20,8 @@ export class AlertService {
       },
     };
 
-    console.log("Esto se envía al servidor:", payload);
+    console.log("Esto se envía al servidor:", informacion);
 
-    return this.http.post(this.serverUrl, payload);
+    return this.http.post(this.serverUrl, informacion);
   }
 }
