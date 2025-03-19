@@ -1,29 +1,25 @@
 <div class="all">
-  <div class="header"><img src="/public/heart.png" alt="logo"></div>
-                    <div class="temperature">{{ temperatura }} </div>
-                    <div class="description">Temperatura</div>
+    <div class="header"><img src="/public/heart.png" alt="logo"></div>
+                      <div class="temperature">{{ temperatura }} </div>
+                      <div class="description">Temperatura</div>
+                      <div class="humidity">{{ ritmo_cardiaco }} </div>
+                      <div class="description">Ritmo cardiaco</div>
+      <div class="tabla">
+          <table>
+              <thead>
+                  <tr>
+                      <th>Temperatura (°C)</th>
+                      <th>Ritmo cardiaco</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let data of any">
+                      <td>{{ data.temperatura }}</td>
+                      <td>{{ data.ritmo_cardiaco }}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
 
-                    <div class="humidity">{{ ritmo_cardiaco }} </div>
-                    <div class="description">Ritmo cardiaco</div>
-
-    <div class="tabla">
-        <table>
-            <thead>
-                <tr>
-                    <th>Temperatura (°C)</th>
-                    <th>Ritmo cardiaco</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let data of any">
-                    <td>{{ data.temperatura }}</td>
-                    <td>{{ data.ritmo_cardiaco }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-<button>Activar Notificaciones</button>
-
-</div>
+  <button (click)="realizarPeticion()">Activar Notificaciones</button>
+  </div>
