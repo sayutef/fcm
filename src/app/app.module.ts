@@ -11,9 +11,10 @@ import { HeaderComponent } from './header/header.component';
 import { PageTComponent } from './page-t/page-t.component';
 import { PageRComponent } from './page-r/page-r.component';
 import { PageEComponent } from './page-e/page-e.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, HeaderComponent, PageTComponent, PageRComponent, PageEComponent],
+  declarations: [AppComponent, LandingComponent, HeaderComponent, PageTComponent, PageRComponent, PageEComponent, LoginComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
