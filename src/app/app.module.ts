@@ -6,9 +6,10 @@ import { initializeApp } from 'firebase/app';
 import { getMessaging } from 'firebase/messaging';
 import { firebaseConfig } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LandingComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
