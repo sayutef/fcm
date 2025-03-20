@@ -8,9 +8,10 @@ import { firebaseConfig } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { LandingComponent } from './landing/landing.component';
 import { HeaderComponent } from './header/header.component';
+import { PageTComponent } from './page-t/page-t.component';
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, HeaderComponent],
+  declarations: [AppComponent, LandingComponent, HeaderComponent, PageTComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
