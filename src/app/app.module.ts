@@ -10,9 +10,10 @@ import { LandingComponent } from './landing/landing.component';
 import { HeaderComponent } from './header/header.component';
 import { PageTComponent } from './page-t/page-t.component';
 import { PageRComponent } from './page-r/page-r.component';
+import { PageEComponent } from './page-e/page-e.component';
 
 @NgModule({
-  declarations: [AppComponent, LandingComponent, HeaderComponent, PageTComponent, PageRComponent],
+  declarations: [AppComponent, LandingComponent, HeaderComponent, PageTComponent, PageRComponent, PageEComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
